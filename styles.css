@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+}
+.controls {
+  width: 95%;
+  margin: auto;
+  position: relative;
+}
+.controls button {
+  font-size: 12px;
+  height: 29px;
+  position: absolute;
+  top: 0px;
+  margin-left: 2px;
+}
+input {
+  font-size: 20px;
+  overflow: visible;
+}
+#newQuoteText {
+  width: 70%;
+  margin-bottom: 30px;
+}
+#newQuoteAuthor {
+  width: 21%;
+}
+.filterdiv {
+  display: inline;
+  text-align: center;
+  width: 100%;
+}
+.filterdiv input {
+  width: 100%;
+}
+
+.quoteBox {
+  width: 95%;
+  margin: 50px auto;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.quote {
+  line-height: 80px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid grey;
+  border-bottom: 2px solid lightgrey;
+  border-bottom-right-radius: 40px;
+  border-right: 2px solid lightgrey;
+  border-left: 2px solid lightgrey;
+  border-bottom-left-radius: 40px;
+  box-shadow: 10px 10px 5px #888888;
+  padding: 25px;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 60px;
+  position: relative;
+}
+
+#quoteText {
+  font-size: 40px;
+  color: #3B3B3B;
+  font-family: serif;
+}
+
+#author {
+  font-family: 'Mate SC', serif;
+  font-size: 38px;
+  color: #727272;
+  margin-left: 20px;
+}
+
+.ex {
+  float: right;
+  background: url("media/close-128.png") no-repeat center center;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.ex:hover {
+  background: url("http://www.iconsdb.com/icons/preview/red/x-mark-3-xxl.png") no-repeat center center;
+  background-size: cover;
+}
