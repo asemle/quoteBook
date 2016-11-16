@@ -10,21 +10,34 @@ angular.module('quoteBook')
    { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
  ];
 
+if(!localStorage.getItem('quotes')) {
+  localStorage.setItem('quotes', JSON.stringify(quotes));
+}
+
  this.getData = function() {
+   quotes = JSON.parse(localStorage.getItem('quotes'));
    return quotes;
  }
+
  this.addData = function(obj) {
    if(obj['text'] && obj['author']) {
    quotes.unshift(obj)
+   localStorage.setItem('quotes', JSON.stringify(quotes));
    return true;
   }
   return false;
  }
+
  this.removeData = function(textToRemove) {
-   for(var i = 0; i < quotes.length; i++) {
-     if (quotes[i].text.toLowerCase() === textToRemove.toLowerCase()){
-        quotes.splice(i--,1);
+   storedQuotes = JSON.parse(localStorage.getItem('quotes'))
+   console.log()
+   for(var i = 0; i < storedQuotes.length; i++) {
+     if (storedQuotes[i].text.toLowerCase() === textToRemove.toLowerCase()){
+        quotes.splice(i, 1)
+        storedQuotes.splice(i--,1);
       }
- }
+    }
+    localStorage.setItem('quotes', JSON.stringify(storedQuotes));
 }
+
 });
